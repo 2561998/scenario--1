@@ -1,0 +1,20 @@
+<html>
+<body>
+<div>
+    <label for="address_1">
+        Address Line 1
+    </label>
+    <input
+        type="text"
+        id="address_1"
+        name="address_1"
+        ng-model="addressLineOne"
+        required
+        placeholder="address line 1"
+    >
+    <div ng-if="(addressForm.$submitted || addressForm.address_1.$touched)" ng-messages="addressForm.address_1.$error" class="error" role="alert">
+        <div class="error" ng-message="required">You did not enter first line of address</div>
+    </div>
+</div>
+</body>
+<html>
